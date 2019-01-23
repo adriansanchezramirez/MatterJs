@@ -5,8 +5,8 @@ The game scene
 
 Configure Phaser for MatterJS physics
 Start with creating your Phaser game object:
-
-```var config = {
+```
+var config = {
     type: Phaser.AUTO,
     width: 1200,
     height: 960,
@@ -24,21 +24,27 @@ Start with creating your Phaser game object:
 };
 
 var game = new Phaser.Game(config);
+
 The important part is the physics section where you set the engine to matter.
 
 You can also enable debug output by uncommenting the debug: true line. This draws outlines of the shapes. Quite useful if you get some strange behaviour in your scene.
-
-Load the physics shapes and sprites
-function preload() {
+```
+ # Load the physics shapes and sprites
+ ```
+    function preload() {
+    
     // Load sprite sheet generated with TexturePacker
     this.load.atlas('sheet', 'assets/fruit-sprites.png', 'assets/fruit-sprites.json');
 
     // Load body shapes from JSON file generated using PhysicsEditor
     this.load.json('shapes', 'assets/fruit-shapes.json');
-}
-The first line loads the sprite sheet created with TexturePacker. The second one loads the shapes file you've created with PhysicsEditor.
+    
+    }
 
-Create the phaser game scene with physics
+The first line loads the sprite sheet created with TexturePacker. The second one loads the shapes file you've created with PhysicsEditor.
+```
+ # Create the phaser game scene with physics
+ ```
 In the create() function start by retrieving the shapes data from the loader cache:
 
 function create() {
@@ -79,3 +85,4 @@ Finally add a click handler to add some bananas when somebody clicks in the scen
         this.matter.add.sprite(pointer.x, pointer.y, 'sheet', 'banana', {shape: shapes.banana});
     }, this);
 }
+```
