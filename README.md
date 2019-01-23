@@ -1,7 +1,7 @@
 # MatterJs
 Create your physics shapes
 
-The game scene
+# The game scene
 
 Configure Phaser for MatterJS physics
 Start with creating your Phaser game object:
@@ -27,7 +27,8 @@ var game = new Phaser.Game(config);
 
 The important part is the physics section where you set the engine to matter.
 
-You can also enable debug output by uncommenting the debug: true line. This draws outlines of the shapes. Quite useful if you get some strange behaviour in your scene.
+You can also enable debug output by uncommenting the debug: true line. 
+This draws outlines of the shapes. Quite useful if you get some strange behaviour in your scene.
 ```
  # Load the physics shapes and sprites
  ```
@@ -41,7 +42,8 @@ You can also enable debug output by uncommenting the debug: true line. This draw
     
     }
 
-The first line loads the sprite sheet created with TexturePacker. The second one loads the shapes file you've created with PhysicsEditor.
+The first line loads the sprite sheet created with TexturePacker. 
+The second one loads the shapes file you've created with PhysicsEditor.
 ```
  # Create the phaser game scene with physics
  ```
@@ -49,7 +51,8 @@ In the create() function start by retrieving the shapes data from the loader cac
 
 function create() {
     var shapes = this.cache.json.get('shapes');
-Set the world bounds in the physics engine. We restrict the area to the screen — no scrolling, no items leaving the screen:
+Set the world bounds in the physics engine. We restrict the area to the screen — 
+no scrolling, no items leaving the screen:
 
     this.matter.world.setBounds(0, 0, game.config.width, game.config.height);
 Add some background image... just for the looks:
@@ -68,7 +71,8 @@ the name of the sprite
 the physics shape data to use
 The second line updates the shape position. Why? The previous call's first two parameters are already the position!
 
-Right... but matter uses the center of mass for placing the sprite. This makes it hard to place the sprite in exact positions on the screen.
+Right... but matter uses the center of mass for placing the sprite. 
+This makes it hard to place the sprite in exact positions on the screen.
 
 The second call adjusts desired position (0,280) by adding the calculated center of mass.
 
