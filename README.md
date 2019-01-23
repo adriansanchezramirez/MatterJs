@@ -24,12 +24,12 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
-
+```
 The important part is the physics section where you set the engine to matter.
 
 You can also enable debug output by uncommenting the debug: true line. 
 This draws outlines of the shapes. Quite useful if you get some strange behaviour in your scene.
-```
+
  # Load the physics shapes and sprites
  ```
     function preload() {
@@ -69,7 +69,8 @@ position y
 the sprite sheet on which the ground sprite is located
 the name of the sprite
 the physics shape data to use
-The second line updates the shape position. Why? The previous call's first two parameters are already the position!
+The second line updates the shape position. Why? 
+The previous call's first two parameters are already the position!
 
 Right... but matter uses the center of mass for placing the sprite. 
 This makes it hard to place the sprite in exact positions on the screen.
