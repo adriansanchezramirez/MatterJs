@@ -42,7 +42,7 @@ function preload() {
 
 The first line loads the sprite sheet created with TexturePacker. The second one loads the shapes file you've created with PhysicsEditor.
 
-# eate the phaser game scene with physics
+# Create the phaser game scene with physics
 
 In the create() function start by retrieving the shapes data from the loader cache:
 ```
