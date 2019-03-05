@@ -90,4 +90,5 @@ Finally add a click handler to add some bananas when somebody clicks in the scen
     this.input.on('pointerdown', function (pointer) {
         this.matter.add.sprite(pointer.x, pointer.y, 'sheet', 'banana', {shape: shapes.banana});
     }, this);
-}
+    }
+
