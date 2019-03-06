@@ -1,5 +1,29 @@
 # Phaser 3 + MatterJS example
 
+
+# Create your physics shapes
+It's an easy job for the crate: It's a simple square. The orange is also easy: It's a circle. You can do this directly in your source code if you want.
+
+But it's more complicated when it comes to creating the shapes for the cherries and the banana, not to speak of the floor. You have to determine the coordinates of each vertex of the polygon outline.
+
+We've tried it — believe me. This is why we've created a visual editor: PhysicsEditor. With this creating shapes is a piece of cake:
+
+<img src="assets/00.png">
+
+1-set exporter to Phaser (matter.js)
+
+2-drop your sprites into the left pane
+
+3-use the shape tracer in the toolbar
+
+4-adjust the body parameters like density, friction,..
+
+5-press publish
+
+PhysicsEditor now asks you for the name of a json file to write. Save it as assets/fruit-shapes.json.
+
+Please download PhysicsEditor from here:
+
 # The game scene
 
 Configure Phaser for MatterJS physics
